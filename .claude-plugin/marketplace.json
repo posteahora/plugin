@@ -1,0 +1,19 @@
+{
+  "name": "posteahora",
+  "owner": {
+    "name": "PosteAhora",
+    "url": "https://posteahora.com"
+  },
+  "plugins": [
+    {
+      "name": "posteahora",
+      "source": "./plugin",
+      "description": "Plan, schedule and publish social posts across Instagram, X, LinkedIn, Threads, Facebook, TikTok and more — from Claude. Bundles the PosteAhora MCP connector and posting skills.",
+      "version": "0.1.0",
+      "author": {
+        "name": "PosteAhora",
+        "url": "https://posteahora.com"
+      }
+    }
+  ]
+}
