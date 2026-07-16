@@ -19,13 +19,20 @@ Then restart Claude Code when prompted.
 
 ## Set your connector
 
-The plugin ships an MCP connector that needs your PosteAhora **Connector URL**:
+The plugin ships an MCP connector whose URL is read from an environment variable —
+so you never edit plugin files, and it survives plugin updates:
 
 1. In PosteAhora → **Settings → API & integrations**, generate your Connector URL
    (requires the API/MCP add-on). It looks like `https://mcp.posteahora.com/mcp/u_…`.
-2. Add it where your plugin config expects the connector (replace
-   `REPLACE_WITH_YOUR_CONNECTOR_TOKEN` in the bundled `.mcp.json`), or paste the URL
-   in **Settings → Connectors**.
+2. Set it as `POSTEAHORA_CONNECTOR_URL` and add it to your shell profile so it persists:
+
+   ```bash
+   export POSTEAHORA_CONNECTOR_URL="https://mcp.posteahora.com/mcp/u_…"
+   ```
+
+3. Reload Claude Code (`/reload-plugins` or restart). The connector picks up the URL
+   automatically — the Connector URL is a secret, so keeping it in your env (not in
+   any repo or plugin file) is exactly right.
 
 Prefer a local key-based setup instead of the hosted connector? Use
 [`@posteahora/mcp`](https://github.com/posteahora/mcp).

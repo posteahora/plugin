@@ -5,16 +5,20 @@ collect post ideas into your kanban, and publish across your connected social
 platforms.
 
 ## What's inside
-- `.mcp.json` — the hosted PosteAhora MCP server (remote, no-auth capability URL).
-- `skills/collect-post-ideas/` — brainstorm post ideas straight into your Ideas board.
+- `.mcp.json` — the hosted PosteAhora MCP server; its URL is read from the
+  `POSTEAHORA_CONNECTOR_URL` environment variable (nothing to edit).
+- `skills/` — `collect-post-ideas`, `schedule-content`, `analytics-report`.
 
 ## Setup
 1. In PosteAhora → **Settings → API & integrations**, generate your **Connector URL**
    (requires the API/MCP add-on). It looks like
    `https://mcp.posteahora.com/mcp/u_…`.
-2. Edit `.mcp.json` and replace `REPLACE_WITH_YOUR_CONNECTOR_TOKEN` with your URL.
-3. Install the plugin in Claude (Cowork → Customize → install) or add the MCP URL
-   directly via Settings → Connectors.
+2. Set it as an environment variable so the plugin picks it up automatically:
+   ```bash
+   export POSTEAHORA_CONNECTOR_URL="https://mcp.posteahora.com/mcp/u_…"
+   ```
+   Add it to your shell profile (`~/.zshrc`, `~/.bashrc`) to persist it.
+3. Install the plugin, then reload Claude Code.
 
 ## Using it
 - "Brainstorm 8 post ideas about Mulu, tag them eng" → the `collect-post-ideas`
