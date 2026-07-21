@@ -20,6 +20,11 @@ platforms.
    Add it to your shell profile (`~/.zshrc`, `~/.bashrc`) to persist it.
 3. Install the plugin, then reload Claude Code.
 
+A Connector URL is **bound to one workspace** (the one active when you generated
+it): the tools act on that workspace's accounts, posts and ideas only. For
+another workspace, generate a Connector URL there. A viewer-role connector can
+read but not create or publish.
+
 ## Using it
 - "Brainstorm 8 post ideas about Mulu, tag them eng" → the `collect-post-ideas`
   skill drops them into your Ideas board (Unassigned).

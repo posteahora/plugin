@@ -37,6 +37,15 @@ so you never edit plugin files, and it survives plugin updates:
 Prefer a local key-based setup instead of the hosted connector? Use
 [`@posteahora/mcp`](https://github.com/posteahora/mcp).
 
+## Workspaces
+
+Your Connector URL is **bound to one workspace** — the one active when you
+generated it. So `list_accounts`, `list_posts` and analytics cover **that
+workspace** only. To work in another workspace, switch to it in PosteAhora,
+generate a Connector URL there, and point `POSTEAHORA_CONNECTOR_URL` at it.
+Writes are role-gated: a **viewer** connector can read but not create, schedule
+or publish.
+
 ## What's included
 
 **MCP connector** — `list_accounts`, `create_idea`, `create_post`, `schedule_post`,
