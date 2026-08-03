@@ -50,6 +50,11 @@ anything goes live (see Guardrails).
 - Require an explicit `accountId` per channel (from `list_accounts`). Hard-stop if
   missing; do not fall back to "the first connected account".
 - Never invent media URLs, stats, or claims in captions.
+- **TikTok media is strict.** Photos must be JPEG; videos must be a standard MP4
+  (H.264 / AAC) at a constant 23–60 fps. TikTok rejects other formats with
+  `file_format_check_failed` and odd/low or variable frame rates with
+  `frame_rate_check_failed` (AI-generated and slideshow clips are the usual
+  offenders — re-encode to 30 fps; retrying the same file won't help).
 - Respect each platform's limits (e.g. X character count) — offer a per-platform
   caption instead of silently truncating.
 - If one post fails, report which one and continue with the rest.
