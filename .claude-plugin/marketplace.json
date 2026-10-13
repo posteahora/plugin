@@ -8,7 +8,7 @@
     {
       "name": "posteahora",
       "source": "./plugin",
-      "description": "Plan, schedule and publish social posts across Instagram, X, LinkedIn, Threads, Facebook, TikTok and more — from Claude. Bundles the PosteAhora MCP connector and posting skills.",
+      "description": "Plan, schedule and publish social posts across Instagram, X, LinkedIn, Threads, Facebook, TikTok, Google Business and more — from Claude. Bundles the PosteAhora MCP connector and posting skills.",
       "version": "0.1.0",
       "author": {
         "name": "PosteAhora",
