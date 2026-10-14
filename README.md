@@ -3,8 +3,8 @@
 A [Claude Code](https://claude.com/claude-code) plugin marketplace for
 [PosteAhora](https://posteahora.com). Install it to connect the **PosteAhora MCP
 server** and a set of **posting skills** so Claude can plan, schedule and publish
-social content across Instagram, X, LinkedIn, Threads, Facebook, TikTok and more —
-right from your editor.
+social content across Instagram, X, LinkedIn, Threads, Facebook, TikTok, Google
+Business and more — right from your editor.
 
 ## Install
 
